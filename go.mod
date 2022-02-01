@@ -1,4 +1,4 @@
-module go-utils
+module github.com/chaithat-sukra/cachable_orm
 
 go 1.17
 
