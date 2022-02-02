@@ -34,8 +34,8 @@ func init() {
 	}
 }
 
-var cm *CachedMap
-var cOrm *CachedOrm
+var cm *main2.CachedMap
+var cOrm *main2.CachedOrm
 
 func main() {
 
@@ -43,8 +43,8 @@ func main() {
 	r := new(big.Int)
 	fmt.Println(r.Binomial(1000, 10))
 
-	cm = NewCachedMap()
-	cOrm = NewCachedOrm(db, cm)
+	cm = main2.NewCachedMap()
+	cOrm = main2.NewCachedOrm(db, cm)
 
 	//var ts []Token
 	//BulkFind(&ts, []string{"YWRtaW46YWRtaW4xMjM=", "ZS1wZW5zaW9uOmFkbWluMTIz"})
