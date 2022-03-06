@@ -11,6 +11,8 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+
+	xx "github.com/chaithat-sukra/cachable_orm"
 )
 
 var db *gorm.DB
@@ -34,8 +36,8 @@ func init() {
 	}
 }
 
-var cm *main2.CachedMap
-var cOrm *main2.CachedOrm
+var cm *xx.CachedMap
+var cOrm *xx.CachedOrm
 
 func main() {
 
@@ -43,8 +45,8 @@ func main() {
 	r := new(big.Int)
 	fmt.Println(r.Binomial(1000, 10))
 
-	cm = main2.NewCachedMap()
-	cOrm = main2.NewCachedOrm(db, cm)
+	cm = xx.NewCachedMap()
+	cOrm = xx.NewCachedOrm(db, cm)
 
 	//var ts []Token
 	//BulkFind(&ts, []string{"YWRtaW46YWRtaW4xMjM=", "ZS1wZW5zaW9uOmFkbWluMTIz"})
